@@ -52,7 +52,8 @@ const personalMovieDB = {
     },
     writeYourGenres: function() {
         for (let i = 1; i <= 3; i++) {
-            let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+            let genre = prompt(`Ваш любимый жанр под номером ${i}`).toLowerCase();
+            //потому что сортировка ставит на первые позиции верхний регистр
 
             if (genre === '' || genre === null) {
                 console.log('false, add a text');
